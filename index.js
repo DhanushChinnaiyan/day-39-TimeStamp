@@ -1,6 +1,6 @@
 const fs = require("fs")
 const express = require("express")
-const { ifError } = require("assert")
+
 
 
 
@@ -8,7 +8,7 @@ const app = express()
 app.use(express.json())
 
 const Timestamp = new Date().toLocaleString();
-console.log(Timestamp)
+// console.log(Timestamp)
 
 app.get("/",async(request,response)=>{
     fs.writeFile("current date-time.txt",Timestamp,function(error){
